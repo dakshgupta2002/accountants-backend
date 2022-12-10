@@ -51,7 +51,7 @@ salaryRouter.route('/:id')
         emp.specialAllowance = req?.body?.specialAllowance;
         emp.providentFund = req?.body?.providentFund;
         emp.insurance = req?.body?.insurance;
-        emp.reimburse = req?.body?.reimburse;
+        emp.reimburse = req?.body?.Reimbursement || req?.body?.reimbursement;
 
         await emp.save();
         res.status(200).json(emp)
